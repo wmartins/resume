@@ -1,5 +1,146 @@
-\documentclass{article}
+% resume.tex
+%
+% (c) 2002 Matthew Boedicker <mboedick@mboedick.org> (original author) http://mboedick.org
+% (c) 2003-2007 David J. Grant <davidgrant-at-gmail.com> http://www.davidgrant.ca
+% (c) 2007-2014 Todd C. Miller <Todd.Miller@courtesan.com> http://www.courtesan.com/todd
+%
+% This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
+
+\documentclass[letterpaper,11pt]{article}
+
+%-----------------------------------------------------------
+\usepackage[utf8]{inputenc}
+\usepackage[empty]{fullpage}
+\usepackage{color}
+\usepackage{hyperref}
+\definecolor{mygrey}{gray}{0.85}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=blue,      
+    urlcolor=blue
+}
+
+% Adjust margins to 0.5in on all sides
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
+
+%-----------------------------------------------------------
+%Custom commands
+\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resheading}[1]{{\large \colorbox{mygrey}{\begin{minipage}{\textwidth}{\textbf{#1 \vphantom{p\^{E}}}}\end{minipage}}}}
+\newcommand{\ressubheading}[4]{
+\begin{tabular*}{7.0in}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{#4} \\
+\end{tabular*}\vspace{-6pt}}
+%-----------------------------------------------------------
 
 \begin{document}
-Lorem
+
+    \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
+    \textbf{\large William H. Martins} & +55 51 9626 1149 \\
+    Avenida Bento Gonçalves, 1515      & \href{mailto:wwwhmartins@gmail.com}{wwwhmartins@gmail.com} \\
+    Porto Alegre - Brasil              & \href{https://github.com/wmartins}{github.com/wmartins} \\
+                                       & \href{https://linkedin.com/in/wwwhmartins}{linkedin.com/in/wwwhmartins}
+    \end{tabular*}
+    \\
+    \vspace{0.1in}
+
+    \resheading{Education}
+    \begin{itemize}
+        \item
+            \ressubheading
+                {Pontifícia Universidade Católica do Rio Grande do Sul}
+                {Porto Alegre - Rio Grande do Sul - Brasil}
+                {Bacharelado em Ciência de Computação}
+                {Fev. 2012 - Dez. 2016}
+
+        \item
+            \ressubheading
+                {Instituto Federal Sul-rio-grandense}
+                {Charqueadas - Rio Grande do Sul - Brasil}
+                {Curso Técnico Integrado em Informática}
+                {Fev. 2008 - Dez. 2011}
+    \end{itemize}
+
+    \resheading{Experiência}
+    \begin{itemize}
+        \item
+            \ressubheading
+                {ADP - Automatic Data Processing}
+                {Porto Alegre - Rio Grande do Sul - Brasil}
+                {Software Developer}
+                {Março 2015 - Atualmente}
+            \begin{itemize}
+                \resitem{Parte do time de desenvolvimento, sendo responsavel tanto por código \textit{front-end} quando \textit{back-end}.}
+                \resitem{Ajudou a estabelcer um modelo de \textit{git flow} efetivo que permitiu que o time desenvolvesse novas funcionalidades enquanto entregava código em produção com confiança.}
+                \resitem{Responsável por refatorar testes de uma aplicação \textit{back-end}, que ajudou o time a desenvolver nossas funcionalidades com confiança.}
+                \resitem{Critou um pequeno e efetivo \textit{framework} de interfaces, usado para prototipar e desenvolver novas telas.}
+            \end{itemize}
+
+        \item
+            \ressubheading
+                {dEx digital}
+                {Porto Alegre - Rio Grande do Sul - Brasil}
+                {Front-End Developer}
+                {October 2013 - February 2015}
+            \begin{itemize}
+                \resitem{Responsável pelo desenvolvimento de sites responsivos para os clientes da empresa.}
+                \resitem{Criou um novo \textit{workflow}, utilizando ferramentas e tecnologias novas.}
+                \resitem{Ajudou o time de \textit{back-end} no desenvolvimento de algumas funcionalidades.}
+            \end{itemize}
+
+        \item
+            \ressubheading
+                {Ockan Networks}
+                {Porto Alegre - Rio Grande do Sul - Brasil}
+                {Front-End Developer}
+                {January 2012 - October 2013}
+            \begin{itemize}
+                \resitem{Parte do time de desenvolvimento/análise, sendo responsável por obter requisitos dos sistemas e construír soluções \textit{web} para eles.}
+                \resitem{Introduziu um novo \textit{framework} que fez o time ser muito mais produtivo.}
+            \end{itemize}
+
+        \item
+            \ressubheading
+                {TMW Telecom}
+                {Arroio dos Ratos - Rio Grande do Sul - Brasil}
+                {Web Developer}
+                {January 2011 - December 2011}
+            \begin{itemize}
+                \resitem{Parte do time de desenvolvimento/análise, sendo responsável por obter requisitos dos sistemas e construír soluções \textit{web} para eles.}
+                \resitem{Criou uma nova aplicação para gerenciar o \textit{workflow} da empresa.}
+            \end{itemize}
+    \end{itemize}
+
+    \resheading{Habilidades}
+    \begin{description}
+        \item[Linguagens]
+            HTML, CSS, JavaScript, NodeJS, C/C++, Python, Java, PHP, \LaTeX.
+        \item[Bancos de Dados]
+            PostgreSQL, MySQL, Oracle.
+        \item[Tecnologias para \textit{Web}]
+            PostCSS, webpack, SASS, LESS, ReactJS.
+        \item[Outros]
+            Linux, Git, Bash, Docker, GitHub.
+    \end{description}
+
+    \resheading{Projetos de Código Aberto}
+    \begin{itemize}
+        \item
+            \ressubheading
+                {Mongration}
+                {\href{https://github.com/awapps/mongration}{github.com/awapps/mongration}}
+                {MongoDB migration framework}
+                {}
+    \end{itemize}
+
 \end{document}
