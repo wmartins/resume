@@ -1,4 +1,4 @@
-LATEX=xelatex
+LATEX=pdflatex
 
 SRC=src
 DIST=dist
