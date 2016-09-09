@@ -12,4 +12,4 @@ all: $(OBJECTS)
 	mv *.pdf $(DIST)
 
 %.pdf: $(SRC)/%.tex
-	$(LATEX) $<
+	TEXINPUTS=.:./src:${TEXINPUTS} $(LATEX) $<
