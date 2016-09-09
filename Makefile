@@ -1,12 +1,15 @@
-TARGET=resume
 LATEX=xelatex
 
 SRC=src
 DIST=dist
 
-all: $(DIST)/$(TARGET).pdf
-	mkdir -p $(DIST)
-	mv $(TARGET).pdf $(DIST)
+OBJECTS=\
+	resume-en-us.pdf \
+	resume-pt-br.pdf
 
-$(DIST)/%.pdf: $(SRC)/%.tex
+all: $(OBJECTS)
+	mkdir -p $(DIST)
+	mv *.pdf $(DIST)
+
+%.pdf: $(SRC)/%.tex
 	$(LATEX) $<
