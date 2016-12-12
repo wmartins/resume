@@ -9,7 +9,7 @@ OBJECTS=\
 
 all: $(OBJECTS)
 	mkdir -p $(DIST)
-	mv *.pdf $(DIST)
+	cp *.pdf $(DIST)
 
 %.pdf: $(SRC)/%.tex
 	TEXINPUTS=.:$(SRC):${TEXINPUTS} $(LATEX) $<
