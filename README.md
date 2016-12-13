@@ -1,4 +1,4 @@
-# __resume__
+# *Resume*
 
-- [./resume-en-us.pdf](en-us)
-- [./resume-pt-br.pdf](pt-br)
+- [en-us](./resume-en-us.pdf)
+- [pt-br](./resume-pt-br.pdf)
